@@ -1,7 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "GameFramework/PlayerController.h"
 #include "TankAIController.h"
+#include "GameFramework/PlayerController.h"
+
 
 
 void ATankAIController::BeginPlay()
