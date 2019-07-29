@@ -2,7 +2,7 @@
 
 #include "TankAIController.h"
 #include "GameFramework/PlayerController.h"
-
+#include "Tank.h"
 
 
 void ATankAIController::BeginPlay()

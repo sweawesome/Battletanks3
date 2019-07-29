@@ -2,14 +2,12 @@
 #pragma once
 #include "GameFramework/PlayerController.h"
 #include "Runtime/Engine/Classes/Engine/World.h"
-#include "Tank.h"
 #include "CoreMinimal.h"
 #include "AIController.h"
 #include "TankAIController.generated.h"
 
-/**
- * 
- */
+class ATank;
+
 UCLASS()
 class BATTLETANKS2_API ATankAIController : public AAIController
 {

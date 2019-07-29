@@ -1,15 +1,15 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
-#include "Tank.h"
 #include "Runtime/Engine/Classes/Engine/World.h"
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
 #include "TankPlayerController.generated.h"
 
-/**
- * 
- */
+
+
+class ATank;
+
 UCLASS()
 class BATTLETANKS2_API ATankPlayerController : public APlayerController
 {
