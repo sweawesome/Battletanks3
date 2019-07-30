@@ -9,6 +9,7 @@
 #include "TankAimingComponent.generated.h"
 //forward Declaration
 class UTankBarrel; 
+class UTankTurret;
 //Holds Barrels properties and Elevate method
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class BATTLETANKS2_API UTankAimingComponent : public UActorComponent
@@ -19,18 +20,22 @@ class BATTLETANKS2_API UTankAimingComponent : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	UTankAimingComponent();
-
+	// Gets the Barrel Reference
 	void SetBarrelReference(UTankBarrel* BarrelToSet);
+	// Gets the Turret Reference
+	void SetTurretReference(UTankTurret* TurretToSet);
 
-	// TODO add SetTurretReference
 
 	void AimAt(FVector HitLocation, float LaunchSpeed);
 private:
 
 	void MoveBarrelTowards(FVector AimDirection);
-
+	/*
+	void MoveTurretTowards(FVector AimDirection);
+	*/
 
 	UTankBarrel* Barrel = nullptr;
+	UTankTurret* Turret = nullptr;
 
 	UPROPERTY(EditAnywhere, Category = FiringArc)
 	bool HighLowArc = false;
