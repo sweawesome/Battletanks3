@@ -57,11 +57,6 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 		auto Time = GetWorld()->GetTimeSeconds();
 		//UE_LOG(LogTemp, Warning, TEXT("%f: Aim solution found"), Time)
 	}
-	else
-	{
-		auto Time = GetWorld()->GetTimeSeconds();
-		//UE_LOG(LogTemp, Warning, TEXT("%f: No aim solve found"), Time)
-	}
 }
 
 void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)// start location socket should point in the direction of AimDirection 
@@ -72,7 +67,6 @@ void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)// start locat
 	auto AimAsRotator = AimDirection.Rotation();
 	auto BarrelDeltaRotator = AimAsRotator - BarrelRotator;
 
-	UE_LOG(LogTemp, Warning, TEXT("BarrelDeltaRot: %s"), *BarrelDeltaRotator.ToString())
 	
 		Barrel->Elevate(BarrelDeltaRotator.Pitch);
 		Turret->Rotate(BarrelDeltaRotator.GetNormalized().Yaw);
